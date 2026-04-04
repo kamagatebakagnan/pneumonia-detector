@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+streamlit
+torch
+torchvision
+mlflow
+grad-cam
+pillow
+numpy
+opencv-python
+requests
+scikit-learn
