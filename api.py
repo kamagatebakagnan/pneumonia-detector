@@ -24,7 +24,7 @@ model = models.resnet50(weights=None)
 model.fc = nn.Sequential(
     nn.Linear(2048, 512),
     nn.ReLU(),
-    nn.Dropout(0.3),
+    nn.Dropout(0.5),
     nn.Linear(512, 2)
 )
 model.load_state_dict(checkpoint["model_state_dict"])
@@ -39,7 +39,6 @@ cam = GradCAM(model=model, target_layers=[model.layer4[-1]])
 # Preprocessing
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.Grayscale(num_output_channels=3),
     transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406],
                          [0.229, 0.224, 0.225]),

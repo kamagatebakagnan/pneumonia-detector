@@ -18,19 +18,19 @@ experiments = [
         "name"      : "CNN_from_scratch",
         "params"    : {
             "architecture" : "CNN_scratch",
-            "epochs"       : 15,
+            "epochs"       : 9,
             "learning_rate": 0.001,
             "batch_size"   : 32,
             "optimizer"    : "Adam",
             "augmentation" : True,
         },
         "metrics"   : {
-            "auc_roc"          : 0.9901,
-            "f1_macro"         : 0.8837,
-            "recall_pneumonia" : 0.842,
-            "precision_normal" : 0.989,
-            "false_negatives"  : 123,
-            "accuracy"         : 0.88,
+            "auc_roc"          : 0.9838,
+            "f1_macro"         : 0.00,
+            "recall_pneumonia" : 0.915,
+            "recall_normal"    : 0.624,
+            "false_negatives"  : 33,
+            "accuracy"         : 0.81,
         }
     },
     {

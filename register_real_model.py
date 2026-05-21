@@ -22,7 +22,7 @@ model = models.resnet50(weights=None)
 model.fc = nn.Sequential(
     nn.Linear(2048, 512),
     nn.ReLU(),
-    nn.Dropout(0.3),
+    nn.Dropout(0.5),
     nn.Linear(512, 2)
 )
 
